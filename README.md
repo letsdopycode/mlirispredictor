@@ -1,1 +1,1 @@
-# mlirispredictor
+# irisflowerpredictor

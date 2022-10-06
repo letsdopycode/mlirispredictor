@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title >
+		iris flower predictor
+	</title>
+  <style>
+    #hstyle{
+      color:cyan;
+      background:rgb(100,120,230);
+      font-family:arial;
+      text-align:center;
+
+    }
+
+   #fstyle{
+     background:rgb(100,120,230);
+     font-family:arial;
+     text-align:center;
+   }
+   body {
+     background-color: rgb(100,150,220);
+     font-family: Verdana;
+     text-align: center;
+   }
+
+   /* Styling the Form (Color, Padding, Shadow) */
+   form {
+     background-color: rgb(100,100,220);
+     max-width: 500px;
+     max-width: 700;
+     margin: 50px auto;
+     padding: 30px 20px;
+     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+   }
+
+   /* Styling form-control Class */
+   .form-control {
+     text-align: left;
+     margin-bottom: 25px;
+   }
+
+   /* Styling form-control Label */
+   .form-control label {
+     display: block;
+     margin-bottom: 10px;
+   }
+
+   /* Styling form-control input,
+   select, textarea */
+   .form-control input,
+   .form-control select,
+   .form-control textarea {
+     border: 1px solid #777;
+     border-radius: 2px;
+     font-family: inherit;
+     padding: 10px;
+     display: block;
+     width: 95%;
+   }
+
+
+
+   /* Styling Button */
+   button {
+     background-color:#FFFFFF;
+     border: 1px solid #777;
+     border-radius: 2px;
+     font-family: inherit;
+     font-size: 21px;
+     display: block;
+     width: 100%;
+     margin-top: 50px;
+     margin-bottom: 20px;
+   }
+  </style>
+<body>
+<h1 id="hstyle" >iris flower predictor</h1>
+<form action="{{url_for("pred")}}" method="post" style="height=400;width=300;">
+  <div  class="form-control">
+  <label for="sl">saple length: </label >
+  <input type="text" id="sl" name="sl" placeholder="sl">
+  </div>
+
+  <div  class="form-control">
+  <label for="sw">saple width:</label >
+  <input type="text" id="sw"  name="sw" placeholder="sw">
+  </div>
+
+  <div  class="form-control">
+  <label for="pl">petal length: </label >
+  <input type="text" id="pl" name="pl" placeholder="pl">
+  </div>
+
+  <div  class="form-control">
+  <label for="pw">petal width:</label >
+  <input type="text" id="pw"  name="pw" placeholder="pw">
+  </div>
+
+  <div  class="form-control">
+  <button  type="submit" >Predict</button>
+  </div>
+</form>
+</body>
+</html>
+{% block main %}
+{% endblock %}

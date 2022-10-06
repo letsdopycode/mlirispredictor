@@ -1,0 +1,16 @@
+{% extends "inputdata.html" %}
+{% block main %}
+<style>
+  .setbackimg{
+  background-image:url(setosa.jpg);
+  height=100;
+  width=100;
+  background-position:left;
+
+
+}
+</style>
+<p style="color:cyan;">flower is {{result[0]}} </p>
+<img src="{{result[1]}}" height=120,width=200>
+
+{% endblock %}
